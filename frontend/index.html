@@ -18,6 +18,9 @@
   <link data-minify="1" rel="stylesheet" id="oodles-css-css" href="./static/css/homepage.css" type="text/css"
     media="all" />
 
+  <link data-minify="1" rel="stylesheet" id="oodles-css-css" href="./static/css/chatbot.css" type="text/css"
+    media="all" />
+
   <style>
     .lds-roller {
       display: inline-block;
@@ -124,7 +127,6 @@
       }
     }
   </style>
-
   <!-- main css ends -->
 
 </head>
@@ -195,12 +197,12 @@
     </section>
   </div>
 
-  <!-- <div style="background-color:#d3d3d3;"> -->
-  <div
-    style="padding-bottom:20px;border-top-left-radius:20px;border-top-right-radius:20px;margin-left:20px;margin-right:20px;margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-    <h2 style="text-align: center;padding-top:50px">📄Chat with your pdf file🤗</h2>
+
+  <!-- Chat Bot -->
+  <div id="chat_container">
+    <h2 style="text-align: center">📄Chat with your pdf file🤗</h2>
     <p style="text-align: center;margin-top: 50px;">Upload your PDF</p>
-    <section style="align-items:center;width:800px;margin:auto">
+    <section id="choose_file_box">
       <div onclick="choose_file()"
         style="cursor:pointer;border-radius: 5px;border:1px dashed;justify-content:space-between;display: flex;padding: 20px">
         <div style="display: flex;">
@@ -217,8 +219,7 @@
             <small>Limit 200MB per file • PDF</small>
           </div>
         </div>
-        <button style="background-color:orange;border-radius: 5px;border:none;padding: 10px;">Browse
-          files</button>
+        <button id="choose_file_btn">Browse files</button>
       </div>
 
       <div id="chosen_fileinfo" style="visibility:hidden;margin-top:10px;display: flex;justify-content: space-between;">
@@ -242,7 +243,7 @@
         </svg> -->
       </div>
       <p style="margin-top:50px">Ask questions about related your upload pdf file</p>
-      <input style="width:800px" id="query_box" type="text" placeholder="Type question and hit enter" />
+      <input id="query_box" type="text" placeholder="Type question and hit enter" />
       <p id="response" style="margin-top:30px;margin-bottom: 0;"></p>
     </section>
   </div>
