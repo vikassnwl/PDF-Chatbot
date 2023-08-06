@@ -5,9 +5,6 @@
 
   <title>Artificial Intelligence Development Services</title>
 
-  <!-- load js -->
-  <script src="./static/js/script.js"></script>
-
   <!-- main css -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300%2C400%2C600%2C700&#038;display=swap" />
@@ -20,12 +17,136 @@
 
   <link data-minify="1" rel="stylesheet" id="oodles-css-css" href="./static/css/homepage.css" type="text/css"
     media="all" />
+
+  <style>
+    .lds-roller {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+
+    .lds-roller div {
+      animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      transform-origin: 40px 40px;
+    }
+
+    .lds-roller div:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #fff;
+      margin: -4px 0 0 -4px;
+    }
+
+    .lds-roller div:nth-child(1) {
+      animation-delay: -0.036s;
+    }
+
+    .lds-roller div:nth-child(1):after {
+      top: 63px;
+      left: 63px;
+    }
+
+    .lds-roller div:nth-child(2) {
+      animation-delay: -0.072s;
+    }
+
+    .lds-roller div:nth-child(2):after {
+      top: 68px;
+      left: 56px;
+    }
+
+    .lds-roller div:nth-child(3) {
+      animation-delay: -0.108s;
+    }
+
+    .lds-roller div:nth-child(3):after {
+      top: 71px;
+      left: 48px;
+    }
+
+    .lds-roller div:nth-child(4) {
+      animation-delay: -0.144s;
+    }
+
+    .lds-roller div:nth-child(4):after {
+      top: 72px;
+      left: 40px;
+    }
+
+    .lds-roller div:nth-child(5) {
+      animation-delay: -0.18s;
+    }
+
+    .lds-roller div:nth-child(5):after {
+      top: 71px;
+      left: 32px;
+    }
+
+    .lds-roller div:nth-child(6) {
+      animation-delay: -0.216s;
+    }
+
+    .lds-roller div:nth-child(6):after {
+      top: 68px;
+      left: 24px;
+    }
+
+    .lds-roller div:nth-child(7) {
+      animation-delay: -0.252s;
+    }
+
+    .lds-roller div:nth-child(7):after {
+      top: 63px;
+      left: 17px;
+    }
+
+    .lds-roller div:nth-child(8) {
+      animation-delay: -0.288s;
+    }
+
+    .lds-roller div:nth-child(8):after {
+      top: 56px;
+      left: 12px;
+    }
+
+    @keyframes lds-roller {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
   <!-- main css ends -->
 
 </head>
 
 <body style="font-family: 'Open Sans',sans-serif!important;"
   class="services-template services-template-page-templates services-template-single-services-ai services-template-page-templatessingle-services-ai-php single single-services postid-208 wp-custom-logo wp-embed-responsive artificial-intelligence-development-services">
+
+  <!-- spinner -->
+  <div id="spinner"
+    style="display:none;justify-content:center;align-items:center;width: 100%;height: 100%;position: fixed;background-color: rgba(0, 0, 0, 0.5);z-index: 1000">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
   <header>
     <nav class="navbar navbar-expand-md navbar-light header_background newshodow" id="oodles_header">
       <div class="container-fluid header_width">
@@ -76,7 +197,7 @@
 
   <!-- <div style="background-color:#d3d3d3;"> -->
   <div
-    style="padding-bottom:20px;border-top-left-radius:10px;border-top-right-radius:10px;margin-left:20px;margin-right:20px;margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    style="padding-bottom:20px;border-top-left-radius:20px;border-top-right-radius:20px;margin-left:20px;margin-right:20px;margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <h2 style="text-align: center;padding-top:50px">📄Chat with your pdf file🤗</h2>
     <p style="text-align: center;margin-top: 50px;">Upload your PDF</p>
     <section style="align-items:center;width:800px;margin:auto">
@@ -112,19 +233,22 @@
           <div id="chosen_filename" style="margin-left: 10px;">chosen_filename</div>
           <small id="chosen_filesize" style="margin-left: 10px;">0.0MB</small>
         </div>
-        <svg style="width: 30px;height:30px" viewBox="0 0 24 24" aria-hidden="true" focusable="false"
+        <!-- <svg style="width: 30px;height:30px" viewBox="0 0 24 24" aria-hidden="true" focusable="false"
           fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="inherit" class="e1fb0mya1 css-fblp2m ex0cdmw0">
           <path fill="none" d="M0 0h24v24H0V0z"></path>
           <path
             d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z">
           </path>
-        </svg>
+        </svg> -->
       </div>
       <p style="margin-top:50px">Ask questions about related your upload pdf file</p>
-      <input value="How are you?">
-      <p style="margin-top:30px;margin-bottom: 0;">I'm doing well, thank you.</p>
+      <input style="width:800px" id="query_box" type="text" placeholder="Type question and hit enter" />
+      <p id="response" style="margin-top:30px;margin-bottom: 0;"></p>
     </section>
   </div>
+
+  <!-- load js -->
+  <script src="./static/js/script.js"></script>
 
 </body>
 
